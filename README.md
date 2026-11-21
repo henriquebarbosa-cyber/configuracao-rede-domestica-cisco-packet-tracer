@@ -1,66 +1,89 @@
-# Configuração de Rede Doméstica no Cisco Packet Tracer
+# 🏠 Configuração de Rede Doméstica no Cisco Packet Tracer
 
-## 1. Sobre o projeto
+![Cisco Packet Tracer](https://img.shields.io/badge/Cisco-Packet%20Tracer-blue)
+![Networking](https://img.shields.io/badge/Área-Redes%20de%20Computadores-green)
+![Status](https://img.shields.io/badge/Status-Concluído-success)
 
-Este projeto apresenta a montagem e configuração de uma rede doméstica utilizando o **Cisco Packet Tracer**, simulador de redes desenvolvido pela Cisco.
+## 📌 1. Sobre o projeto
 
-O objetivo é conectar dispositivos de uma residência por meio de conexões cabeadas e sem fio, configurando modem, roteador wireless, servidor DHCP e segurança da rede Wi-Fi.
+Este projeto apresenta a montagem e configuração de uma rede doméstica utilizando o **Cisco Packet Tracer**, ferramenta de simulação de redes desenvolvida pela Cisco.
 
-O projeto também demonstra testes de conectividade entre os dispositivos e acesso a um servidor externo simulado.
+O laboratório consiste na implementação de uma infraestrutura de rede residencial, realizando conexões cabeadas e sem fio entre diferentes dispositivos.
 
-## 2. Objetivos
+Durante a atividade, foram configurados um Cable Modem, um Home Wireless Router, computadores, televisão e laptop, além de parâmetros de endereçamento IP, DHCP e segurança da rede wireless.
 
+Também foram realizados testes de conectividade para verificar a comunicação dos dispositivos com a rede e o acesso a um servidor externo simulado.
+
+## 🎯 2. Objetivos
+
+- Montar uma infraestrutura de rede doméstica.
 - Realizar conexões utilizando cabos coaxiais e Ethernet.
-- Conectar o Cable Modem ao Home Wireless Router.
-- Configurar computadores para obter endereços IP automaticamente via DHCP.
-- Acessar a interface gráfica do roteador.
+- Conectar o Cable Modem ao roteador wireless.
+- Configurar computadores para receber endereços IP automaticamente por DHCP.
+- Acessar a interface administrativa do roteador.
+- Configurar o limite de usuários do servidor DHCP.
 - Alterar as credenciais administrativas padrão.
-- Configurar a rede wireless com segurança WPA2.
-- Conectar um laptop à rede Wi-Fi.
-- Verificar a conectividade dos computadores com a Internet simulada.
+- Configurar uma rede Wi-Fi com segurança WPA2.
+- Conectar dispositivos à rede wireless.
+- Realizar testes de conectividade entre os dispositivos.
+- Verificar o acesso ao servidor `skillsforall.srv`.
 
-## 3. Equipamentos utilizados
+## 🛠️ 3. Equipamentos e tecnologias utilizados
+
+### Equipamentos
 
 | Equipamento | Função |
 |---|---|
-| Cable Splitter | Dividir o sinal do cabo coaxial |
-| Cable Modem | Fornecer conexão de rede ao roteador |
-| Home Wireless Router | Gerenciar a rede doméstica cabeada e sem fio |
-| TV | Receber o sinal de televisão |
+| Cable Splitter | Divisão do sinal coaxial |
+| Cable Modem | Conexão com a rede externa |
+| Home Wireless Router | Gerenciamento da rede doméstica |
+| TV | Recepção do sinal de televisão |
 | Office PC | Computador conectado por cabo |
 | Bedroom PC | Computador conectado por cabo |
 | Laptop | Dispositivo conectado via Wi-Fi |
 
-**Software:** Cisco Packet Tracer.
+### Tecnologias e conceitos
+
+- Cisco Packet Tracer
+- LAN (Local Area Network)
+- WLAN (Wireless Local Area Network)
+- IPv4
+- DHCP (Dynamic Host Configuration Protocol)
+- Ethernet
+- Cabo coaxial
+- Wi-Fi
+- WPA2-PSK
+- Roteamento doméstico
+- Conectividade de rede
 
 ---
 
-# 4. Desenvolvimento do projeto
+# 💻 4. Desenvolvimento do projeto
 
 ## ETAPA 1 — Conexão do cabo de televisão
 
-Nesta etapa, foi realizada a conexão entre o divisor de cabo (Cable Splitter), o Cable Modem e a televisão.
+Nesta primeira etapa, foi realizada a conexão entre o divisor de cabo (Cable Splitter), o Cable Modem e a televisão.
 
 ### Procedimentos
 
-1. Acesse **Network Components** e clique em **Connections** (ícone de raio).
+1. Acesse **Network Components** e clique em **Connections**, identificado pelo ícone de raio.
 2. Selecione o cabo coaxial, identificado pelo ícone azul em formato de zigue-zague.
 3. Clique no Cable Splitter e selecione a porta `Coaxial1`.
 4. Clique no Cable Modem e selecione a porta `Port 0`.
 5. Repita o procedimento utilizando a porta `Coaxial2` do Cable Splitter e a porta `Port 0` da TV.
-6. Clique na TV e altere o campo **Status** para **ON**.
+6. Clique na televisão e altere o campo **Status** para **ON**.
 
-Com as conexões realizadas corretamente, a televisão deverá exibir uma imagem representando um programa de TV.
+Após realizar corretamente as conexões, a televisão deverá apresentar uma imagem representando um programa de TV.
 
-### Evidências
+### 📷 Evidências da configuração
 
-![Conexão do cabo coaxial](images/01-conexao-tv.PNG)
+**Figura 01 — Conexão do cabo coaxial**
 
-*Figura 1 — Conexão entre o divisor de cabo e os dispositivos.*
+![Conexão do cabo coaxial](images/1-Cabo-tv.PNG)
 
-![TV funcionando](images/01.1-tv-funcionando.PNG)
+**Figura 02 — Televisão funcionando**
 
-*Figura 2 — Televisão funcionando após a conexão.*
+![Televisão funcionando](images/1.1-tv-funcionando.PNG)
 
 ---
 
@@ -72,24 +95,24 @@ Nesta etapa, foi realizada a conexão entre o Cable Modem, o Home Wireless Route
 
 1. Acesse **Connections** e selecione o cabo **Copper Straight-Through**, identificado por uma linha preta sólida.
 2. Conecte a porta `Port 1` do Cable Modem à porta `Internet` do Home Wireless Router.
-3. Selecione o Office PC e conecte a porta `FastEthernet0` ao roteador, utilizando a porta `GigabitEthernet 1`.
-4. Repita o procedimento para o Bedroom PC, utilizando a porta `FastEthernet0` do computador e a porta `GigabitEthernet 2` do roteador.
+3. Selecione o Office PC e conecte a porta `FastEthernet0` à porta `GigabitEthernet 1` do roteador.
+4. Repita o procedimento para conectar o Bedroom PC à porta `GigabitEthernet 2` do roteador, utilizando a porta `FastEthernet0` do computador.
 
-### Evidências
+### 📷 Evidências da configuração
 
-![Conexão do modem e roteador](images/02-cabo-modem-home-wireless.PNG)
+**Figura 03 — Conexão entre Cable Modem e Home Wireless Router**
 
-*Figura 3 — Conexão entre Cable Modem e Home Wireless Router.*
+![Conexão do modem e roteador](images/2.Cabo-modem-e-Home-wireless.PNG)
 
-![Conexão do PC do quarto](images/02.1-pc-quarto.PNG)
+**Figura 04 — Conexão do computador do quarto**
 
-*Figura 4 — Conexão cabeada do computador do quarto.*
+![Conexão do PC do quarto](images/2.1-pc-do-quarto.PNG)
 
 ---
 
 ## ETAPA 3 — Configuração do roteador e do DHCP
 
-Nesta etapa, foi realizada a configuração inicial do roteador wireless, incluindo o acesso à interface administrativa, a configuração do DHCP e a alteração das credenciais de administração.
+Nesta etapa, foi realizada a configuração inicial do roteador wireless, incluindo acesso à interface administrativa, configuração do DHCP, limitação de usuários e alteração da senha administrativa.
 
 ### 3.1. Acessando a interface do roteador
 
@@ -114,19 +137,23 @@ Caso a configuração demore, utilize a opção **Fast Forward Time**, localizad
 
 Após a autenticação, será exibida a interface gráfica de configuração do roteador.
 
-### Evidência
+### 📷 Evidência
 
-![Configuração DHCP](images/03-configuracao-dhcp.PNG)
+**Figura 05 — Configuração DHCP e acesso à rede**
 
-*Figura 5 — Configuração automática de IP por DHCP.*
+![Configuração DHCP](images/3.Confg-dhcp.PNG)
 
-![Acesso ao roteador](images/03.1-acesso-roteador.PNG)
+**Figura 06 — Acesso à interface administrativa do roteador**
 
-*Figura 6 — Acesso à interface administrativa do roteador.*
+![Acesso ao roteador](images/3.1-entrando.PNG)
 
-### 3.2. Configurando o limite de usuários DHCP
+### 3.2. Configurando o limite máximo de usuários DHCP
 
-O objetivo é limitar a quantidade de dispositivos que poderão receber endereços IP automaticamente.
+O objetivo desta configuração é limitar a quantidade de dispositivos que poderão receber endereços IP automaticamente.
+
+A proposta do laboratório considera que não mais de 10 dispositivos estarão conectados simultaneamente à rede doméstica.
+
+### Procedimentos
 
 1. Na interface do roteador, permaneça na guia **Setup**.
 2. Localize a seção **Network Setup**.
@@ -135,17 +162,19 @@ O objetivo é limitar a quantidade de dispositivos que poderão receber endereç
 5. Role a página até o final.
 6. Clique em **Save Settings**.
 
-Essa configuração limita a quantidade de endereços disponibilizados pelo servidor DHCP para os dispositivos conectados à rede.
+Essa configuração limita a quantidade de endereços disponibilizados pelo servidor DHCP aos dispositivos conectados à rede.
 
-### Evidência
+### 📷 Evidência
 
-![Limite de usuários](images/03.2-limite-usuarios.PNG)
+**Figura 07 — Configuração do limite máximo de usuários**
 
-*Figura 7 — Configuração do limite máximo de 10 usuários.*
+![Limite de usuários DHCP](images/3.2-Maximum-number.PNG)
 
 ### 3.3. Alterando a senha administrativa
 
 Por segurança, é importante substituir as credenciais padrão do roteador.
+
+### Procedimentos
 
 1. Acesse a guia **Administration**.
 2. Localize os campos de senha administrativa.
@@ -153,19 +182,19 @@ Por segurança, é importante substituir as credenciais padrão do roteador.
 4. Confirme a nova senha.
 5. Clique em **Save Settings**.
 
-**Atenção:** a senha utilizada durante o laboratório não deve ser publicada no GitHub. Utilize uma senha de teste e mantenha credenciais reais sempre privadas.
+**Observação de segurança:** as credenciais administrativas padrão devem ser alteradas, pois são amplamente conhecidas. Não publique senhas reais ou credenciais pessoais no GitHub.
 
-### Evidência
+### 📷 Evidência
 
-![Configuração de senha](images/03.3-configuracao-senha.PNG)
+**Figura 08 — Alteração da senha administrativa**
 
-*Figura 8 — Alteração das credenciais administrativas.*
+![Configuração de senha](images/3.3-confi-nova-senha.PNG)
 
 ---
 
 ## ETAPA 4 — Configuração da rede Wi-Fi e segurança WPA2
 
-Nesta etapa, foi configurada a rede wireless e realizada a conexão do laptop.
+Nesta etapa, foi realizada a configuração da rede wireless e a conexão do laptop à rede doméstica.
 
 ### 4.1. Configurando a rede sem fio
 
@@ -176,28 +205,28 @@ No Home Wireless Router, acesse as configurações wireless e defina:
 - Tipo de criptografia: conforme disponibilizado pelo roteador.
 - Senha da rede: defina uma senha segura para o laboratório.
 
-Salve as configurações utilizando **Save Settings**.
+Após realizar as configurações, clique em **Save Settings**.
 
-### Evidência
+### 📷 Evidência
 
-![Configuração Wi-Fi](images/04-configuracao-wifi.PNG)
+**Figura 09 — Configuração da rede wireless**
 
-*Figura 9 — Configuração da rede sem fio.*
+![Configuração Wi-Fi](images/4-conf-wifi.PNG)
 
 ### 4.2. Configurando a segurança WPA2
 
 1. Acesse as configurações de segurança wireless.
 2. Selecione o protocolo WPA2-PSK, caso disponível.
-3. Defina a chave pré-compartilhada (Pre-Shared Key).
+3. Defina a chave pré-compartilhada (**Pre-Shared Key**).
 4. Salve as alterações.
 
-O WPA2 protege a comunicação entre os dispositivos conectados à rede sem fio, exigindo uma senha para autenticação.
+O WPA2 adiciona uma camada de proteção à rede sem fio, exigindo uma senha para autenticação dos dispositivos.
 
-### Evidência
+### 📷 Evidência
 
-![Configuração WPA2](images/04.1-configuracao-wpa2.PNG)
+**Figura 10 — Configuração de segurança WPA2**
 
-*Figura 10 — Configuração de segurança WPA2.*
+![Configuração WPA2](images/4.1-config-wpa2.PNG)
 
 ### 4.3. Conectando o laptop à rede Wi-Fi
 
@@ -220,15 +249,11 @@ Clique em **More Information** para visualizar os detalhes da conexão.
 
 Caso o endereço IP não comece com `192`, utilize **Fast Forward Time** para acelerar a simulação.
 
-### Evidências
+### 📷 Evidência
 
-![Configuração Wi-Fi](images/04-configuracao-wifi.PNG)
+**Figura 11 — Laptop conectado com sucesso ao ponto de acesso**
 
-*Figura 11 — Seleção da rede wireless.*
-
-![Conexão Wi-Fi estabelecida](images/04.2-conexao-wifi-sucesso.PNG)
-
-*Figura 12 — Laptop conectado com sucesso ao ponto de acesso.*
+![Conexão Wi-Fi estabelecida](images/4.2-conectado-com-sucesso.PNG)
 
 ### 4.4. Testando o acesso à Internet simulada
 
@@ -247,7 +272,7 @@ O carregamento da página demonstra que o laptop possui conectividade com o serv
 
 ## ETAPA 5 — Configuração do Bedroom PC e testes finais
 
-Nesta etapa, foi realizada a configuração do segundo computador da residência e a verificação da conectividade.
+Nesta última etapa, foi realizada a configuração do segundo computador da residência e a verificação da conectividade.
 
 ### 5.1. Configurando o Bedroom PC
 
@@ -259,11 +284,11 @@ Nesta etapa, foi realizada a configuração do segundo computador da residência
 
 Verifique se o endereço IPv4 recebido começa com `192`.
 
-### Evidência
+### 📷 Evidência
 
-![Bedroom PC configurado](images/05.1-pc-quarto.PNG)
+**Figura 12 — Configuração DHCP do computador do quarto**
 
-*Figura 13 — Configuração DHCP do computador do quarto.*
+![Bedroom PC configurado](images/5.1-pc-quarto.PNG)
 
 ### 5.2. Testando a conectividade
 
@@ -278,60 +303,96 @@ Verifique se o endereço IPv4 recebido começa com `192`.
 
 O acesso ao servidor confirma a conectividade do Bedroom PC com a rede simulada.
 
-### Evidência
+### 📷 Evidência
 
-![Office PC funcionando](images/05-office-pc-ok.PNG)
+**Figura 13 — Teste de conectividade do Office PC**
 
-*Figura 14 — Teste de conectividade do Office PC.*
+![Office PC funcionando](images/5-officepc-ok.PNG)
 
 ---
 
-# 5. Resultados obtidos
+# 📊 5. Resultados obtidos
 
-Ao finalizar as configurações, a rede doméstica apresentou os seguintes resultados esperados:
+Após a realização das etapas de configuração, foram contemplados os seguintes resultados esperados:
 
-- Conexão do Cable Splitter com o Cable Modem e a TV.
-- Funcionamento da televisão após a conexão coaxial.
-- Comunicação entre o Cable Modem e o Home Wireless Router.
-- Conexão cabeada dos computadores ao roteador.
-- Configuração automática de endereços IP por DHCP.
-- Limitação do DHCP para até 10 usuários.
-- Alteração das credenciais administrativas do roteador.
-- Configuração da rede wireless com segurança WPA2.
-- Conexão do laptop à rede Wi-Fi.
-- Testes de acesso ao servidor `skillsforall.srv`.
+| Configuração | Resultado esperado |
+|---|---|
+| Conexão coaxial | TV e Cable Modem conectados |
+| Conexão Ethernet | Modem, roteador e computadores conectados |
+| DHCP | Endereços IP atribuídos automaticamente |
+| Limite de usuários | Máximo de 10 usuários configurado |
+| Administração | Credenciais administrativas alteradas |
+| Rede wireless | SSID configurado |
+| Segurança Wi-Fi | WPA2 configurado |
+| Laptop | Conectado ao ponto de acesso |
+| Office PC | Teste de conectividade |
+| Bedroom PC | Teste de conectividade |
 
-# 6. Conclusão
+# 🎓 6. Conhecimentos adquiridos
 
-A realização deste projeto permitiu colocar em prática conceitos fundamentais de redes de computadores, utilizando o Cisco Packet Tracer como ambiente de simulação.
+Durante a execução deste laboratório, foram praticados conceitos importantes de infraestrutura e administração de redes:
+
+- Montagem de uma rede doméstica.
+- Identificação e utilização de cabos de rede.
+- Conexões coaxiais e Ethernet.
+- Configuração de equipamentos de rede.
+- Endereçamento IPv4.
+- Funcionamento do DHCP.
+- Configuração de roteadores wireless.
+- Administração de credenciais.
+- Segurança de redes Wi-Fi utilizando WPA2.
+- Conectividade entre dispositivos cabeados e sem fio.
+- Testes de acesso a servidores.
+
+# ✅ 7. Conclusão
+
+A realização deste projeto permitiu colocar em prática conceitos fundamentais de redes de computadores utilizando o Cisco Packet Tracer como ambiente de simulação.
 
 Foram desenvolvidas atividades envolvendo cabeamento coaxial, conexões Ethernet, configuração de roteadores, endereçamento IPv4, DHCP, segurança wireless e testes de conectividade.
 
 O laboratório demonstrou como diferentes dispositivos podem ser integrados em uma rede doméstica, permitindo comunicação entre equipamentos cabeados e sem fio.
 
-**Projeto concluído com sucesso!**
+Além dos conhecimentos técnicos, a atividade reforçou a importância da organização, documentação e aplicação de boas práticas de segurança na configuração de redes.
+
+**Projeto concluído!**
 
 ---
 
-## 7. Tecnologias e conceitos utilizados
+## 📁 8. Estrutura do repositório
 
-- Cisco Packet Tracer
-- Redes de computadores
-- LAN (Local Area Network)
-- WLAN (Wireless Local Area Network)
-- IPv4
-- DHCP
-- Cable Modem
-- Home Wireless Router
-- Ethernet
-- Cabo coaxial
-- Wi-Fi
-- WPA2-PSK
-- Conectividade de rede
+```text
+configuracao-rede-domestica-cisco-packet-tracer/
+│
+├── README.md
+│
+├── images/
+│   ├── 1-Cabo-tv.PNG
+│   ├── 1.1-tv-funcionando.PNG
+│   ├── 2.1-pc-do-quarto.PNG
+│   ├── 2.Cabo-modem-e-Home-wireless.PNG
+│   ├── 3.1-entrando.PNG
+│   ├── 3.2-Maximum-number.PNG
+│   ├── 3.3-confi-nova-senha.PNG
+│   ├── 3.Confg-dhcp.PNG
+│   ├── 4-conf-wifi.PNG
+│   ├── 4.1-config-wpa2.PNG
+│   ├── 4.2-conectado-com-sucesso.PNG
+│   ├── 5-officepc-ok.PNG
+│   └── 5.1-pc-quarto.PNG
+│
+└── projeto/
+    └── rede-domestica.pkt
+```
 
-## 8. Arquivo do projeto
+**Observação:** o arquivo `.pkt` é opcional e poderá ser adicionado para permitir que outras pessoas abram a topologia no Cisco Packet Tracer.
 
-O arquivo original do Cisco Packet Tracer poderá ser disponibilizado na pasta `projeto/`, permitindo que outros usuários abram a topologia e reproduzam as configurações.
+---
 
-**Formato:** `.pkt`
+## 🚀 9. Ferramentas utilizadas
 
+- [Cisco Packet Tracer](https://www.netacad.com/cisco-packet-tracer)
+- [GitHub](https://github.com/)
+
+**Categoria:** Redes de Computadores  
+**Tipo:** Laboratório prático de configuração de rede  
+**Ferramenta:** Cisco Packet Tracer
