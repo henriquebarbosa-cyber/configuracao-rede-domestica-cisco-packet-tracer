@@ -54,11 +54,11 @@ Com as conexões realizadas corretamente, a televisão deverá exibir uma imagem
 
 ### Evidências
 
-![Conexão do cabo coaxial](imagens/01-conexao-tv.png)
+![Conexão do cabo coaxial](imagens/01-conexao-tv.PNG)
 
 *Figura 1 — Conexão entre o divisor de cabo e os dispositivos.*
 
-![TV funcionando](imagens/01.1-tv-funcionando.png)
+![TV funcionando](imagens/01.1-tv-funcionando.PNG)
 
 *Figura 2 — Televisão funcionando após a conexão.*
 
@@ -77,11 +77,11 @@ Nesta etapa, foi realizada a conexão entre o Cable Modem, o Home Wireless Route
 
 ### Evidências
 
-![Conexão do modem e roteador](imagens/02-cabo-modem-home-wireless.png)
+![Conexão do modem e roteador](imagens/02-cabo-modem-home-wireless.PNG)
 
 *Figura 3 — Conexão entre Cable Modem e Home Wireless Router.*
 
-![Conexão do PC do quarto](imagens/02.1-pc-quarto.png)
+![Conexão do PC do quarto](imagens/02.1-pc-quarto.PNG)
 
 *Figura 4 — Conexão cabeada do computador do quarto.*
 
@@ -116,11 +116,11 @@ Após a autenticação, será exibida a interface gráfica de configuração do 
 
 ### Evidência
 
-![Configuração DHCP](imagens/03-configuracao-dhcp.png)
+![Configuração DHCP](imagens/03-configuracao-dhcp.PNG)
 
 *Figura 5 — Configuração automática de IP por DHCP.*
 
-![Acesso ao roteador](imagens/03.1-acesso-roteador.png)
+![Acesso ao roteador](imagens/03.1-acesso-roteador.PNG)
 
 *Figura 6 — Acesso à interface administrativa do roteador.*
 
@@ -139,7 +139,7 @@ Essa configuração limita a quantidade de endereços disponibilizados pelo serv
 
 ### Evidência
 
-![Limite de usuários](imagens/03.2-limite-usuarios.png)
+![Limite de usuários](imagens/03.2-limite-usuarios.PNG)
 
 *Figura 7 — Configuração do limite máximo de 10 usuários.*
 
@@ -157,7 +157,7 @@ Por segurança, é importante substituir as credenciais padrão do roteador.
 
 ### Evidência
 
-![Configuração de senha](imagens/03.3-configuracao-senha.png)
+![Configuração de senha](imagens/03.3-configuracao-senha.PNG)
 
 *Figura 8 — Alteração das credenciais administrativas.*
 
@@ -180,7 +180,7 @@ Salve as configurações utilizando **Save Settings**.
 
 ### Evidência
 
-![Configuração Wi-Fi](imagens/04-configuracao-wifi.png)
+![Configuração Wi-Fi](imagens/04-configuracao-wifi.PNG)
 
 *Figura 9 — Configuração da rede sem fio.*
 
@@ -195,7 +195,7 @@ O WPA2 protege a comunicação entre os dispositivos conectados à rede sem fio,
 
 ### Evidência
 
-![Configuração WPA2](imagens/04.1-configuracao-wpa2.png)
+![Configuração WPA2](imagens/04.1-configuracao-wpa2.PNG)
 
 *Figura 10 — Configuração de segurança WPA2.*
 
@@ -222,11 +222,11 @@ Caso o endereço IP não comece com `192`, utilize **Fast Forward Time** para ac
 
 ### Evidências
 
-![Configuração Wi-Fi](imagens/04-configuracao-wifi.png)
+![Configuração Wi-Fi](imagens/04-configuracao-wifi.PNG)
 
 *Figura 11 — Seleção da rede wireless.*
 
-![Conexão Wi-Fi estabelecida](imagens/04.2-conexao-wifi-sucesso.png)
+![Conexão Wi-Fi estabelecida](imagens/04.2-conexao-wifi-sucesso.PNG)
 
 *Figura 12 — Laptop conectado com sucesso ao ponto de acesso.*
 
@@ -261,7 +261,7 @@ Verifique se o endereço IPv4 recebido começa com `192`.
 
 ### Evidência
 
-![Bedroom PC configurado](imagens/05.1-pc-quarto.png)
+![Bedroom PC configurado](imagens/05.1-pc-quarto.PNG)
 
 *Figura 13 — Configuração DHCP do computador do quarto.*
 
@@ -280,7 +280,7 @@ O acesso ao servidor confirma a conectividade do Bedroom PC com a rede simulada.
 
 ### Evidência
 
-![Office PC funcionando](imagens/05-office-pc-ok.png)
+![Office PC funcionando](imagens/05-office-pc-ok.PNG)
 
 *Figura 14 — Teste de conectividade do Office PC.*
 
